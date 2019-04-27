@@ -1,0 +1,10 @@
+Sources:
+
+reddit - pushshift.io
+kaggle
+github 'awesome' datasets
+google dataset search
+google news article "global _____"
+ny/SFOPEN datasets
+Atul Bute (UCSF Head data director)
+UCI
