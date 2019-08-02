@@ -1,10 +1,12 @@
 # Predicting Lending Club Loan Defaults
 **Jeremy Chow**
 
-The goal of this project was to classify predicting defaulting loans based on pre-loan metrics.
+5/9/2019
+
+The goal of this project was to classify defaulted loans based on pre-loan metrics.
 
 ## The Data and Preprocessing
-The original data set came from [LendingClub](https://www.lendingclub.com/info/download-data.action). Each row of data consisted of 145 rows with loan data (amount, monthly payment, time issued), account information, settlement information, hardship details, investor funding information. There is a class imbalance of about 80% paid off loans and 20% defulated loans. The first step was to drop all data that would not be available at time of issuance to prevent data leakage. 
+The original data set came from [LendingClub](https://www.lendingclub.com/info/download-data.action). Each row of data consisted of 145 rows with loan data (amount, monthly payment, time issued), account information, settlement information, hardship details, investor funding information. There is a class imbalance of about 80% paid off loans and 20% defaulted loans. The first step was to drop all data that would not be available at time of issuance to prevent data leakage. 
 
 ## Exploratory Data Analysis
 
@@ -31,7 +33,7 @@ The confusion matrix tells us that our model classified 73% of the issued loans 
 
 ## Custom Cost metric
 
-By summing the average money gained from a paid off loan and subtracting the average money lost on a misclassified loan, w e can optimize the threshold for profits. 
+By summing the average money gained from a paid off loan and subtracting the average money lost on a misclassified loan, we can optimize the threshold for profits. 
 
 However, this strategy yields that of the data set in the first place - in other words, the threshold was set to 0 and none of the issued loans were considered defaulted because accepting all loans in the data set maximized profits.
 ## Conclusion
