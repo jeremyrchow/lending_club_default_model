@@ -20,9 +20,11 @@ We can see what random forest believes is the most important features, but note 
 First we split the data into an 80%-20% train test split, maintaining the 82%~18% class imbalance between the two new samples. 
 We then train three classifier models: [Gradient boosting classifier](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html), [Random Forest Classifier](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html), and [Logistic Regression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) against classifying just the 'sub grade' feature, which is Lending Club's metric for estimating the risk of a loan.
 
-The Gradient Boosting Classifier (GBC) model has the best ROC-AUC score of 0.7255, although the models perform similarly. 
+
 
 ![ROC curves comparison between all models](https://github.com/jeremyrchow/lending_club_default_model/blob/master/graphs/ROC_curves_all.png?raw=true)
+
+The Gradient Boosting Classifier (GBC) model has the best ROC-AUC score of 0.7255, although the models perform similarly. Because the GBC model is an ensemble of trees generated sequentially to improve on the error of the previous tree, it makes sense that it would be one of the top performing models.
 
 ## Results
 Using the GBC model, we can generate the confusion matrices by optimizing for F1 Score.
@@ -42,5 +44,5 @@ The classifier models built were able to identify defaulting loans but at the co
 
 ## Future Work
 To improve on this model, we can try the following:
-- Downsample the paid off loans to reach a 50-50 split
-- Optimize models using more gridsearch of parameters (ie. finding optimal leaves for random forest)
+- Downsample/upsample the loans to reach a 50-50 split between paid off and defaulted loans.
+- Optimize models using more gridsearch of parameters (ie. finding optimal leaves for random forest).
