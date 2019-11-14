@@ -6,7 +6,7 @@
 The goal of this project was to classify defaulted loans based on pre-loan metrics.
 
 ## The Data and Preprocessing
-The original data set came from [LendingClub](https://www.lendingclub.com/info/download-data.action). Each row of data consisted of 145 rows with loan data (amount, monthly payment, time issued), account information, settlement information, hardship details, investor funding information. There is a class imbalance of about 80% paid off loans and 20% defaulted loans. The first step was to drop all data that would not be available at time of issuance to prevent data leakage. 
+The original data set came from [LendingClub](https://www.lendingclub.com/info/download-data.action). Each row of data consisted of 145 columns with loan data (amount, monthly payment, time issued), account information, settlement information, hardship details, investor funding information. There is a class imbalance of about 80% paid off loans and 20% defaulted loans. The first step was to drop all data that would not be available at time of issuance to prevent data leakage. 
 
 ## Exploratory Data Analysis
 
